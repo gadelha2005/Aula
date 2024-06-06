@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações</title>
+
+<style>
+
+    body{
+        background-color: rgb(35, 142, 142);
+        font: normal 15pt Arial;
+    }
+    header{
+        text-align: center;
+        color:white;
+    }
+    section{
+        background: white;
+        color:black;
+        text-align: center;
+        margin: auto;
+        width: 500px;
+        height: 200px;
+    }
+    
+
+</style>
+
+
+</head>
+<body>
+
+
+<header>
+    <h1>Operações matemáticas</h1>
+</header>
+
+<section>
+
+<p>1.Soma 2.Subtração 3.Divisão 4.Multiplicação</p> <br>
+ <input type="number" id="escolha"/>
+ <input type="submit" id="botao"
+    value="confirmar"/>
+  
+    <div id="res">
+</section>
+</div>
+<script>
+
+    let botao = document.getElementById("botao");
+    botao.onclick=confirmar;
+
+    function confirmar(){
+        let escolha=document.getElementById("escolha").value;
+        let res = document.getElementById("res")
+        if(escolha=="1"){
+            let n1 = parseFloat(prompt("Digite um número :"));
+            let n2 = parseFloat(prompt("Digite outro número :"));
+            let soma = n1 + n2;
+            res.innerHTML = `${n1} + ${n2} = ${soma}`;
+            
+        }
+        else if(escolha=="2"){
+            let n1 = parseFloat(prompt("Digite um número :"));
+            let n2 = parseFloat(prompt("Digite outro número :"));
+            let sub = n1 - n2;
+            res.innerHTML = `${n1} - ${n2} = ${sub}`;
+        }
+        else if(escolha=="3"){
+            let n1 = parseFloat(prompt("Digite um número :"));
+            let n2 = parseFloat(prompt("Digite outro número :"));
+            let divisao = n1/n2;
+            if(n2=="0"){
+                alert("[ERRO] Não existe divisão por 0!");
+            }
+            else{
+                res.innerHTML = `${n1} / ${n2} = ${sub}`
+            }
+           
+        }
+        else if(escolha=="4"){
+            let n1 = parseFloat(prompt("Digite um número :"));
+            let n2 = parseFloat(prompt("Digite outro número :"));
+            let mult = n1 * n2;
+            res.innerHTML=` ${n1} x ${n2} = ${mult}`
+        }
+        else{
+            alert("[ERRO] Comando não encontrado!")
+        }
+    }
+ 
+
+
+</script>
+    
+
+
+</body>
+</html>
+      

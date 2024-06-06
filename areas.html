@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+
+<style>
+
+body{
+    background-color: rgb(135, 63, 130);
+    font: normal 12pt Arial;
+}
+
+header{
+    color:white;
+    text-align: center;
+}
+section{
+    background: white;
+    width: 500px;
+    height: 160px;
+    text-align: center;
+    margin: auto;
+}
+
+
+</style>
+
+
+</head>
+<body>
+ 
+ <header>
+    <h1> Medidor de área e volume</h1>
+</header>
+<section>
+ <div>
+
+
+Escolha uma figura: <input type="number" id="escolha"/>
+
+
+<input type="submit" id="botao1"
+     value="confirmar"/>
+
+</div>
+
+<div id="res">
+   
+</div>
+    
+
+
+</section>
+
+<script>
+
+alert("1.Triângulo ; 2.Retângulo ; 3.Cubo ; 4.Circulo ; 5.Sair")
+var botao1=document.getElementById("botao1");
+botao1.onclick=confirmar;
+
+
+
+function confirmar(){
+   var escolha=document.getElementById("escolha").value;
+    if(escolha=="1") {
+        var b = Number(prompt("Digite o valor da base do triângulo: "));
+        var h = Number(prompt("Digite o valor da altura do triângulo: "));
+        var res=document.getElementById("res");
+        var areaT=((b*h)/2).toFixed(2);
+        res.innerHTML = `A área do triângulo é de ${areaT} m2`;
+        
+    }
+    else if(escolha=="2"){
+        var b = Number(prompt("Digite o valor da base do retângulo: "));
+        var h = Number(prompt("Digite o valor da altura do retângulo : "));
+        var res=document.getElementById("res");
+        var areaR=(b*h).toFixed(2);
+        res.innerHTML = `A área do retângulo é de ${areaR} m2`;
+    
+    }
+    else if (escolha=="3"){
+        var l = Number(prompt("Digite o valor do lado do cubo : "));
+        var res=document.getElementById("res");
+        var volC=(l*l*l).toFixed(2);
+        res.innerHTML = `O volume do cubo é de ${volC} m3`;
+
+    }
+    else if(escolha=="4"){
+        var r = Number(prompt("Digite o valor do raio da circunferência:"));
+        var res=document.getElementById("res");
+        var areaC=(3 * (raio*raio)).toFixed(2);
+        res.innerHTML= `A área do circulo é de ${areaC} m2`;
+    }
+    else if(escolha=="5"){
+        document.write("Volte sempre!");
+    }
+    else{
+        alert("[ERRO] TENTE NOVAMENTE");
+    }
+}
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

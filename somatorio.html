@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+<script>
+
+
+function fatorial(x){
+    let fat = 1;
+    for( j = 1 ; j <= x ; j++){
+        fat *= j;
+    }
+    return fat;
+}
+
+var N = parseInt(prompt("Digite um número: "));
+
+var soma = 0;
+var t = 1;
+var cont = 1;
+
+for( i = 1 ; i <= N ; i++){
+    soma += t * (1 / fatorial(cont));
+    t *= -1
+    cont += 2;
+    
+}
+
+console.log(soma.toFixed(5));
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(128, 226, 222);
+    font: normal 15pt Arial;
+}
+
+header{
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+section{
+    color: black;
+    background: white;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+
+
+}
+
+#res{
+    color:rgb(136, 24, 24);
+}
+
+#imagem{
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

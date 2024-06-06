@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila de espera</title>
+</head>
+<body>
+
+
+<script>
+
+var fila = ["jõao"];
+
+var escolha = prompt(`Fila de pacientes = ${fila}/ 1.Adicionar novo paciente 2.Atender paciente 3.Sair`);
+
+
+while (escolha!="3"){
+    if (escolha == "1") {
+       var novoPaciente = prompt("Digite o nome do novo paciente");
+       fila.push(novoPaciente);
+       var escolha = prompt(`Fila de pacientes ${fila} / 1.Adicionar novo paciente 2.Atender paciente 3.Sair`);
+     
+  }
+    
+    else if (escolha=="2")  {
+        var remover = fila.shift();
+        var escolha = prompt(`Fila de pacientes ${fila} / 1.Adicionar novo paciente 2.Atender paciente 3.Sair`);
+    }
+    else {
+        alert("serviço indisponível")
+        var escolha = prompt(`Fila de pacientes ${fila} / 1.Adicionar novo paciente 2.Atender paciente 3.Sair`);
+    }
+ 
+
+ 
+}
+ escolha = prompt(`Fila de pacientes ${fila} / 1.Adicionar novo paciente 2.Atender paciente 3.Sair`);
+</script>
+
+
+    
+</body>
+</html>

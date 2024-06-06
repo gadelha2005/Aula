@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(38, 30, 30);
+    font: normal 15pt Arial;
+}
+
+header{
+    text-align: center;
+    color:white;
+}
+
+section{
+    background: white;
+    color:black;
+    text-align: center;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+}
+
+#foto{
+    height: 150px;
+    width: 150px;
+}
+
+
+
+
+
+
+

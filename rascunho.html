@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    
+<script>
+
+var matriz = [5];
+var tamanhos = ["PP" , "P" , "M" , "G" , "GG"];
+
+for( i = 0 ; i < 5 ; i++){
+    matriz[i] = [10];
+    for( j = 0 ; j < 10 ; j++){
+        matriz[i][j] = parseInt(Math.random() * 10);
+    }
+}
+
+console.table(matriz);
+
+for( i = 0 ; i < 5 ; i++){
+    for( j = 0 ; j < 10 ; j++){
+        console.log(`O tamanho ${tamanhos[i]} tem ${matriz[i][j]} peças do modelo ${j}`);
+    }
+}
+
+var somaModelo = [10];
+
+
+for( j = 0 ; j < 10 ; j++){
+    somaModelo[j] = 0;
+    for( i = 0 ; i < 5 ; i++){
+        somaModelo[j] += matriz[i][j];
+    }
+}
+
+console.log(`SOMA DOS MODELOS = ${somaModelo}`)
+
+var quantidadeMenorModelo = somaModelo[0];
+var posicaoMenorModelo = 0;
+var quantidadeMaiorModelo = somaModelo[0];
+var posicaoMaiorModelo = 0;
+
+
+for( j = 0 ; j < 10 ; j++){
+    if(quantidadeMenorModelo > somaModelo[j]){
+        quantidadeMenorModelo = somaModelo[j];
+        posicaoMenorModelo = j;
+    }
+    if( quantidadeMaiorModelo < somaModelo[j]){
+        quantidadeMaiorModelo = somaModelo[j];
+        posicaoMaiorModelo = j;
+    }
+}
+
+console.log(`MENOR MODELO = ${posicaoMenorModelo} , QUANTIDADE = ${quantidadeMenorModelo}`);
+console.log(`MAIOR MODELO = ${posicaoMaiorModelo} , QUANTIDADE = ${quantidadeMaiorModelo}`);
+
+
+var somaTamanho = [5];
+
+for( i = 0 ; i < 5 ; i++){
+    somaTamanho[i] = 0;
+    for( j = 0 ; j < 10 ; j++){
+        somaTamanho[i] += matriz[i][j];
+    }
+}
+
+console.log(`SOMA DOS TAMANHOS = ${somaTamanho}`);
+
+var quantidadeMenorEstoque = somaTamanho[0];
+var posicaoMenorEstoque = 0;
+
+for( i = 0 ; i < 5 ; i++){
+    if(quantidadeMenorEstoque > somaTamanho[i]){
+        quantidadeMenorEstoque = somaTamanho[i];
+        posicaoMenorEstoque = i;
+    }
+}
+
+console.log(`MENOR ESTOQUE DE TAMANHO = ${posicaoMenorEstoque} , QUANTIDADE = ${quantidadeMenorEstoque}`);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<input type="number" id="n1"/>+
+<input type="number" id="n2"/>
+
+<input type="submit" id="botao"
+    value="calcular"/>
+
+<div id="rest"></div>
+
+<script>
+
+var botao = document.getElementById("botao");
+botao.onclick = calcular;
+
+function calcular(){
+    var n1T = document.getElementById("n1").value;
+        var n1 = parseInt(n1T);
+    var n2T = document.getElementById("n2").value;
+        var n2 = parseInt(n2T);
+        var soma = Number(n1 + n2);
+    var res = document.getElementById("rest");
+    res.innerHTML = `SOMA = ${soma}`;
+    
+    
+}
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

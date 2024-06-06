@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+function fatorial(a){
+    var fat = 1;
+    for(j = 1 ; j <= a ; j++){
+        fat *= j;
+    }
+    return fat;
+}
+
+function converte(b){
+    return b * 3.14 / 180;
+}
+
+
+var y = parseInt(prompt("Digite o angulo em radianos: "));
+var N = parseInt(prompt("Digite o número de termos: "));
+
+
+var soma = 0;
+var x = converte(y);
+var t = 1;
+var den = 1;
+
+for( i = 1 ; i <= N; i++){
+    soma += t * Math.pow(x , den) / fatorial(den);
+    t *= -1;
+    den += 2;
+}
+
+console.log(`Seno de ${y}° =${soma.toFixed(3)}`);
+
+
+
+</script>
+
+
+
+</body>
+</html>

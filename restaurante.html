@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+
+<header>   
+ <h1>Cardápio</h1>   
+<header>
+
+<section>
+
+<h1>Tapioca = R$ 5</h1>
+<input type ="number" id="tapioca"/>
+
+<h1>Sanduíche = R$ 8</h1>
+<input type = "number" id="sanduiche" />
+
+<h1>Café = R$ 2</h1>
+<input type ="number" id="cafe" />
+
+<h1>Suco = R$ 4</h1>
+<input type="number" id="suco" />
+
+<strong>Pagamento</strong>
+<select id="pagamento">
+    <option value=""></option>
+    <option value="dinheiro">Dinheiro</option>
+    <option value="pix">pix</option>
+</select>
+
+<input type="submit" id="botao"
+       value="confirmar pedido" />
+
+</section>
+
+<script>
+
+var botao = document.getElementById("botao");
+botao.onclick = clicar;
+
+function conta() {
+    var tapT = document.getElementById("tapioca").value;
+        var tap= parseFloat( tapT * 5);
+    var sandT = document.getElementById("sanduiche").value;
+        var sand= parseFloat( sandT * 8 )   ;
+    var cafeT = document.getElementById("cafe").value;
+        var cafe= parseFloat(2 * cafeT);
+    var sucoT = document.getElementById("suco").value;
+        var suco = parseFloat(4 * sucoT);
+    
+    var total = parseFloat(tap + sand + cafe + suco).toFixed(2);
+
+}
+
+var total = parseFloat(tap + sand + cafe + suco).toFixed(2);
+
+function clicar(){
+    conta();
+    escolher();
+    document.write(`<h3>Sua conta deu o valor de ${total} R$<h3> <br>`);
+
+    if (pagamento=="dinheiro") {
+        var pago= prompt("Digite o valor pago:");
+        var troco = pago - valor;
+
+        if(pago > total) {
+            alert("Compra finalizada!");
+            document.write(`Seu troco é de ${troco} R$`);
+        }
+        else if(pago == valor) {
+            alert("Compra finalizada!")
+        }
+        else {
+            alert("Compra inválida!");
+            document.write("Dinheiro inválido");
+        }
+    }
+    else if(pagamento=="dinheiro"){
+        document.write("<h3> Chave :61994379340 <h3>")
+    }
+    else {
+        document.write("[ERRO]");
+    }
+}
+function escolher(){
+    pagamento=document.getElementById("pagamento").value;
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+ 
+
+<script>
+   
+ let avf1 = parseFloat(prompt("Digite a nota da AVF1 :"));
+ let avf2 = parseFloat(prompt("Digite a nota da AVF2 : "));
+ let lista = parseFloat(prompt("Digite a nota da lista : "));
+ let prova = parseFloat(prompt("Digite a nota da prova :"));
+ let avf = 0;
+
+ if (avf1 > avf2){
+    avf = avf + avf1
+ }
+ else {
+    avf = avf + avf2
+}
+
+
+let av1 = 0.15*avf + 0.15 * lista + 0.7 * prova;
+document.write(`A nota da AV1 foi ${av1}`);
+document.write("<br>")
+
+
+</script>
+
+   
+
+
+</body>
+</html>

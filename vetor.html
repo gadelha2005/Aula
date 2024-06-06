@@ -1,0 +1,25 @@
+<meta charset = "UTF-8">
+
+<input type = "text" id= "numero"/>
+<input type = "submit" id = "botao"
+        value = "Defina seu número" />
+
+<script>
+
+var numerosPensados = [16 ,34 , 37 , 42 , 50 , 58 ];
+var numeroChutado = document.getElementById("numero");
+
+function botaoClicado() {
+    for( i = 0 ; i < numerosPensados.length ; i++) {
+	    if(numerosPensados[i] == numeroChutado.value) {
+		    alert("Parabéns, você é o pika mesmo, o número acertado é o da posição " + i );
+		    return;
+		}
+	}
+	alert("Errou, seu corno");
+}
+
+var botao = document.getElementById("botao");
+botao.onclick = botaoClicado;
+
+</script>

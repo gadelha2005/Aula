@@ -1,0 +1,28 @@
+<meta charset = "UTF-8" >
+
+<input type= "text" id="textBox" />
+<input type = "submit" id= "button"
+        value = "Aperte aqui!" />
+
+<script>
+var numeroPensado =Math.round(Math.random() * 10);
+
+var numeroChutado = document.getElementById("textBox");
+
+function botaoClicado() {
+   if (numeroPensado==numeroChutado.value) {
+        alert("Parabéns, você é o pika, realmente pensei no número " + numeroPensado);
+   }
+   else {
+        alert("Errou, seu corno, tinha pensado no número " + numeroPensado);
+   }
+}
+
+var botao = document.getElementById("button");
+botao.onclick = botaoClicado;
+
+
+
+
+
+</script>
